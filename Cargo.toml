@@ -1,0 +1,10 @@
+[package]
+name = "advent_of_code"
+version = "0.1.0"
+authors = ["Niels Dommerholt <ndommerholt@gmail.com>"]
+
+[dependencies]
+
+[lib]
+name = "aoc"
+path = "src/lib.rs"

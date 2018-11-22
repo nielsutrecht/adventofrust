@@ -12,6 +12,7 @@ pub fn string_to_digits(s: String) -> Vec<u32> {
 
 pub fn vec_to_string<T : ToString>(v: &[T]) -> String {
     let mut out = String::new();
+
     for e in v {
         out += &e.to_string()
     }

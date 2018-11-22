@@ -1,25 +1,16 @@
+extern crate aoc;
+
 use std::env;
-use std::fs;
-
-mod hello;
-
-use hello::print_hello;
+use aoc::io::read_file;
 
 fn main() {
-    print_hello();
-
     let args: Vec<String> = env::args().collect();
 
-    let guess = parse_args(&args);
+    let day = parse_args(&args);
 
-    let filename = "input/2018/day01.txt";
+    let contents = read_file(2018, day as u8);
 
-    println!("day: {}", guess);
-
-    let contents = fs::read_to_string(filename)
-        .expect("Something went wrong reading the file");
-
-    println!("With text:\n{}", contents);
+    println!("Day {:02}:\n{}", day, contents);
 }
 
 fn parse_args(args: &[String]) -> u32 {

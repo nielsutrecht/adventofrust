@@ -1,7 +1,7 @@
 use std::ops;
 use std::cmp;
 
-enum DirectionCompass {
+pub enum DirectionCompass {
     N,
     E,
     S,
@@ -9,7 +9,7 @@ enum DirectionCompass {
 }
 
 #[derive(Debug, Copy, Clone, PartialEq)]
-struct Point {
+pub struct Point {
     x: i32,
     y: i32,
 }

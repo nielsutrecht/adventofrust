@@ -1,6 +1,7 @@
 pub mod io;
 pub mod convert;
-pub mod math;
+pub mod calc;
+//pub mod collect;
 
 pub trait Day {
     fn new() -> Self;

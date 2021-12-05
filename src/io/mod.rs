@@ -17,6 +17,13 @@ pub fn read_lines(year: u32, day: u8) -> Vec<String> {
         .collect();
 }
 
+pub fn read_buf(year: i32, day: i32) -> BufReader<File> {
+    let filename = format!("input/{}/day{:0>2}.txt", year, day);
+    let file = File::open(filename).expect("Something went wrong reading the file");
+
+    return BufReader::new(file);
+}
+
 fn file_name(year: u32, day: u8) -> String {
     return format!("input/{:04}/day{:02}.txt", year, day);
 }
